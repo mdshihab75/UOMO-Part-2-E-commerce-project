@@ -16,7 +16,7 @@ const BestSelling = () => {
             <ul className='flex gap-12.5 justify-center mb-13.75'>
                 {
                     ProductCategory?.map((item) => (
-                        <Listitems onClick={() => handleActive(item.name)} className={`${category == item.name ? "font-jost font-medium text-base text-primary-black cursor-pointer relative after:content-[] after:absolute after:w-0 hover:after:w-[70%] after:h-0.5 after:bg-primary-black after:left-0 after:bottom-0 after:duration-300" : "font-jost font-medium text-base text-fourth-color"}`}>{item.name}</Listitems>
+                        <Listitems onClick={() => handleActive(item.name)} className={`${category == item.name ? "font-jost font-medium text-base text-primary-black cursor-pointer relative after:content-[''] after:absolute after:w-0 hover:after:w-[70%] after:h-0.5 after:bg-primary-black after:left-0 after:bottom-0 after:duration-300" : "font-jost font-medium text-base text-fourth-color"}`}>{item.name}</Listitems>
                     ))
                 }
             </ul>
