@@ -1,0 +1,115 @@
+
+[
+    {
+      "id": 1,
+      "category": "tops",
+      "title": "Womens Resort Crochet Polo",
+      "price": 25,
+      "thumbnail": "/images/tops-1.png"
+    },
+    {
+      "id": 2,
+      "category": "tops",
+      "title": "Womens Resort Linen Waistcoat",
+      "price": 45,
+      "thumbnail": "/images/tops-2.png"
+    },
+    {
+      "id": 3,
+      "category": "tops",
+      "title": "Womens Monogram Resort Shirt",
+      "price": 55,
+      "thumbnail": "/images/tops-3.png"
+    },
+    {
+      "id": 4,
+      "category": "tops",
+      "title": "Womens Resort Long Sleeve Shirt",
+      "price": 70,
+      "thumbnail": "/images/tops-4.png"
+    },
+    {
+      "id": 5,
+      "category": "jeans",
+      "title": "Slim Fit Jeans",
+      "price": 55,
+      "thumbnail": "/images/jeans-1.png"
+    },
+    {
+      "id": 6,
+      "category": "jeans",
+      "title": "Slim Fit Blue Denim",
+      "price": 60,
+      "thumbnail": "/images/jeans-2.png"
+    },
+    {
+      "id": 7,
+      "category": "jeans",
+      "title": "Blue Denim Fit Jeans",
+      "price": 70,
+      "thumbnail": "/images/jeans-3.png"
+    },
+    {
+      "id": 8,
+      "category": "jeans",
+      "title": "Slim Fit Denim",
+      "price": 90,
+      "thumbnail": "/images/jeans-4.png"
+    },
+    {
+      "id": 9,
+      "category": "bags",
+      "title": "Party Bag",
+      "price": 80,
+      "thumbnail": "/images/bags-1.png"
+    },
+    {
+      "id": 10,
+      "category": "bags",
+      "title": "Party Bag",
+      "price": 100,
+      "thumbnail": "/images/bags-2.png"
+    },
+    {
+      "id": 11,
+      "category": "bags",
+      "title": "Travel Backpack",
+      "price": 120,
+      "thumbnail": "/images/bags-3.png"
+    },
+    {
+      "id": 12,
+      "category": "bags",
+      "title": "Travel Backpack",
+      "price": 150,
+      "thumbnail": "/images/bags-4.png"
+    },
+    {
+      "id": 13,
+      "category": "accessories",
+      "title": "Silver Watch",
+      "price": 200,
+      "thumbnail": "/images/accessories-1.png"
+    },
+    {
+      "id": 14,
+      "category": "accessories",
+      "title": "Sunglasses & Bags",
+      "price": 250,
+      "thumbnail": "/images/accessories-2.png"
+    },
+    {
+      "id": 15,
+      "category": "accessories",
+      "title": "Shoes",
+      "price": 150,
+      "thumbnail": "/images/accessories-3.png"
+    },
+    {
+      "id": 16,
+      "category": "accessories",
+      "title": "All Party Accessories",
+      "price": 180,
+      "thumbnail": "/images/accessories-4.png"
+    }
+  ]

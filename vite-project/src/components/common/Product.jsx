@@ -17,7 +17,6 @@ const Product = ({item}) => {
                 <h3 className='font-jost font-normal text-base text-fourth-color'>{item.price}</h3>
             </div>
             <button className=' absolute w-82.5 top-5 left-27 translate-x-[50%] cursor-pointer'>
-
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="20" cy="20" r="20" fill="white" />
                     <g clip-path="url(#clip0_49_444)">
@@ -29,11 +28,7 @@ const Product = ({item}) => {
                         </clipPath>
                     </defs>
                 </svg>
-
-
             </button>
-            
-            
         </div>
     )
 }
