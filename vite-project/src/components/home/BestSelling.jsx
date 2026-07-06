@@ -4,17 +4,52 @@ import { ProductCategory } from '../../api/ProductCategory'
 import Listitems from '../common/Listitems'
 import axios from 'axios'
 import Product from '../common/Product'
+import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
+import "slick-carousel/slick/slick.css";
+import SliderLib from "react-slick";
 
 const BestSelling = () => {
+    const Slider = SliderLib.default || SliderLib;
     const [category, setCategory] = useState ("all")
     const [products, setProducts] = useState ([])
     const [filteredProducts, setFilteredProducts] = useState([])
+    const [productLimit, setProductLimit] = useState([])
 
     const handleActive = (name) => {
         setCategory(name)
     const filteredProducts = products.filter((item) => item.category === name);
         setFilteredProducts(filteredProducts)
     }
+
+    function SampleNextArrow(props) {
+    const { className, onClick } = props;
+    return (
+    <div className= {`${className} absolute -right-12.25 top-1/2 translate-y-[-50%]`}
+      onClick={onClick}
+    ><TfiAngleRight className='text-[25px]'/></div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div className={`${className} absolute -left-12.25 top-1/2 translate-y-[-50%] z-10`}
+      onClick={onClick}
+    ><TfiAngleLeft className='text-[25px]'/></div>
+  );
+}
+
+    const settings = {
+    dots: false,
+    arrows: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 2000,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+}
 
     function getProduct() {
     axios.get("/products.json").then((res) => {
@@ -26,7 +61,9 @@ const BestSelling = () => {
   } 
   useEffect(() => {
      getProduct()
-  }, [])    
+  }, [])  
+  
+   
    
   return (
     <section className='mt-23 mb-25'>
@@ -39,13 +76,13 @@ const BestSelling = () => {
                     ))
                 }
             </ul>
-            <div className='grid grid-cols-4 gap-x-7.5 gap-y-15'>
-              {category == "all" ? products.map((item) => (
-                <Product key={item.id} item={item} />))
-                :filteredProducts.map((item) => (
-                <Product key={item.id} item={item} />
-                ))}
-            </div>
+            <Slider {...settings}>
+                {products.map((item) => (
+    <div key={item.id} className="px-3">
+      <Product item={item} />
+    </div>
+  ))}
+            </Slider>
         </Container>
     </section>
   )
