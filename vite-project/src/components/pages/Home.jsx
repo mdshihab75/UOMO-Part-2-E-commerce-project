@@ -4,6 +4,7 @@ import HitsCollection from '../home/HitsCollection'
 import BestSelling from '../home/BestSelling'
 import Category from '../home/Category'
 import NewSeason from '../home/NewSeason'
+import LatestProducts from '../home/LatestProducts'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <BestSelling/>
         <Category/>
         <NewSeason/>
+        <LatestProducts/>
     </div>
   )
 }
