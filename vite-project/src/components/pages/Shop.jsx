@@ -5,6 +5,7 @@ import BreadCrumb from '../common/BreadCrumb'
 import SortAndView from '../shop/Sort&View'
 import ShopSidebar from '../shop/ShopSidebar'
 import ProductCategoriesTitle from '../shop/ProductCategoriesTitle'
+import ProductGrid from '../shop/ProductGrid'
 
 const Shop = () => {
   return (
@@ -13,7 +14,7 @@ const Shop = () => {
 
       <Container>
         {/* Top Header */}
-        <div className="flex items-center justify-between mb-10">
+        <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-15">
             <ProductCategoriesTitle />
             <BreadCrumb />
@@ -24,7 +25,7 @@ const Shop = () => {
         {/* Main Content */}
         <div className="flex gap-15">
           <ShopSidebar />
-          {/*<ProductGrid />*/}
+          <ProductGrid />
         </div>
       </Container>
     </main>

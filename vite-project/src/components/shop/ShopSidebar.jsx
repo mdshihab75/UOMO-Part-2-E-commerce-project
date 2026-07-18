@@ -7,13 +7,13 @@ import PriceFilter from './PriceFilter'
 
 const ShopSidebar = () => {
   return (
-    <div>
-        <ProductCategories/>
-        <ColorFilter/>
-        <SizeFilter/>
-        <BrandFilter/>
-        <PriceFilter/>
-    </div>
+    <aside className="w-75 shrink-0">
+      <ProductCategories />
+      <ColorFilter />
+      <SizeFilter />
+      <BrandFilter />
+      <PriceFilter />
+    </aside>
   )
 }
 

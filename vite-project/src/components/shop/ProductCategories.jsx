@@ -2,11 +2,7 @@ import React from 'react'
 
 const ProductCategories = () => {
     return (
-        <section>
-            
-            {/* Left Side */}
-            <div>
-                
+        <section> 
                 {/* Categories */}
                 <div className="grid gap-x-15.5 gap-y-3 font-jost font-normal text-sm leading-6 text-primary-black">
                     <p>Dresses</p>
@@ -20,8 +16,6 @@ const ProductCategories = () => {
                     <p>Men</p>
                     <p>Jumpers & Cardigans</p>
                 </div>
-            </div>
-        
         </section>
         
 
