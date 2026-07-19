@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import ProductCard from './ProductCard';
 
-const ProductGrid = () => {
+const ProductGrid = ({view}) => {
     const [products, setProducts] = useState([])
+    
     {/* Product Api Fatch Here*/}
   function getProduct() {
     axios.get("/products.json").then((res) => {
@@ -16,16 +17,20 @@ const ProductGrid = () => {
   useEffect(() => {
     getProduct()
   }, [])
-
+  
   return (
-    <div className="grid grid-cols-3 gap-7.5 mb-14">
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          product={product}
-        />
-      ))}
-    </div>
+    <div
+  className={`grid gap-7.5 mb-14 ${
+    view === 2
+      ? "grid-cols-2"
+      : view === 3
+      ? "grid-cols-3"
+      : "grid-cols-4"
+      }`}>
+  {products.map((product) => (
+    <ProductCard key={product.id} product={product} />
+  ))}
+</div>
   )
 }
 

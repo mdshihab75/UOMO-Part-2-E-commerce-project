@@ -1,6 +1,10 @@
 import React from 'react'
 
-const SortAndView = () => {
+const SortAndView = ({setView}) => {
+    const viewProducts = [2, 3, 4]
+    let handleView = (view) => {
+        setView(view)
+    }
     return (
         
             <div className='flex gap-15'>
@@ -16,9 +20,11 @@ const SortAndView = () => {
                 {/* View */}
                 <div className='flex gap-3'>
                     <h3 className='font-jost font-medium text-sm text-primary-black leading-6'>VIEW</h3>
-                    <button className='font-jost font-medium text-sm text-primary-black leading-6'>2</button>
-                    <button className='font-jost font-medium text-sm text-primary-black leading-6'>3</button>
-                    <button className='font-jost font-medium text-sm text-primary-black leading-6'>4</button>
+                    {
+                        viewProducts?.map((item) => (
+                            <button onClick={() => handleView(item)} className='font-jost font-medium text-sm text-primary-black leading-6'>{item}</button>
+                        ))
+                    }
                 </div>
             </div>
         

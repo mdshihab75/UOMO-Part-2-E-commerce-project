@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ShopBanner from '../shop/ShopBanner'
 import Container from '../ui/Container'
 import BreadCrumb from '../common/BreadCrumb'
@@ -8,6 +8,8 @@ import ProductCategoriesTitle from '../shop/ProductCategoriesTitle'
 import ProductGrid from '../shop/ProductGrid'
 
 const Shop = () => {
+  const [view, setView] = useState(4)
+  console.log(view)
   return (
     <main>
       <ShopBanner />
@@ -19,13 +21,13 @@ const Shop = () => {
             <ProductCategoriesTitle />
             <BreadCrumb />
           </div>
-          <SortAndView />
+          <SortAndView setView={setView}/>
         </div>
 
         {/* Main Content */}
         <div className="flex gap-15">
           <ShopSidebar />
-          <ProductGrid />
+          <ProductGrid view={view}/>
         </div>
       </Container>
     </main>
