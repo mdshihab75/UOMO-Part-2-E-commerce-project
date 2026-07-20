@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import ProductCard from './ProductCard';
 
+
 const ProductGrid = ({view}) => {
     const [products, setProducts] = useState([])
     
@@ -30,6 +31,7 @@ const ProductGrid = ({view}) => {
   {products.map((product) => (
     <ProductCard key={product.id} product={product} />
   ))}
+  
 </div>
   )
 }

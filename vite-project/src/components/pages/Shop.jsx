@@ -6,6 +6,7 @@ import SortAndView from '../shop/Sort&View'
 import ShopSidebar from '../shop/ShopSidebar'
 import ProductCategoriesTitle from '../shop/ProductCategoriesTitle'
 import ProductGrid from '../shop/ProductGrid'
+import Paginate from '../common/Paginate'
 
 const Shop = () => {
   const [view, setView] = useState(4)
@@ -28,6 +29,7 @@ const Shop = () => {
         <div className="flex gap-15">
           <ShopSidebar />
           <ProductGrid view={view}/>
+          <Paginate/>
         </div>
       </Container>
     </main>
